@@ -1,16 +1,17 @@
 import { createWebHashHistory, createRouter } from 'vue-router'
-import Woqi from '../components/Woqi.vue'
-import Woqi2 from '../components/Woqi2.vue'
+import Home from '../views/Home.vue'
+import Doc from '../views/Doc.vue'
+
 const history = createWebHashHistory()
 const router = createRouter({
   history,
   routes: [
     {
       path: '/',
-      component: Woqi
+      component: Home
     }, {
-      path: '/x',
-      component: Woqi2
+      path: '/doc',
+      component: Doc
     }]
 })
 
