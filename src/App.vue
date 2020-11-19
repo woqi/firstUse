@@ -5,18 +5,19 @@
 </template>
 
 <script>
-import { provide, ref } from 'vue';
+import { provide, ref } from "vue";
 export default {
   name: "App",
-  setup(){
-    const asidVisible = ref(false)
-    provide('jj',asidVisible)
+  setup() {
+    const width = document.documentElement.clientWidth;
+    const asidVisible = ref(width <= 500 ? false : true);
+    provide("asidVisible", asidVisible);
   },
   components: {},
 };
 </script>
 <style lang="scss" >
-  body {
-    margin: 0px;
-  }
+body {
+  margin: 0px;
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="layout">
     <Topnav />
     <div class="content">
-      <aside>
+      <aside v-show="asidVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -31,9 +31,11 @@ import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
   setup() {
-    const asidVisible = inject<Ref<boolean>>("jj");
+    const asidVisible = inject<Ref<boolean>>("asidVisible");
     // console.log(asidVisible.value);
-
+    return{
+      asidVisible
+    }
   },
 };
 </script>
