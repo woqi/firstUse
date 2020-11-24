@@ -16,6 +16,7 @@ export default {
     const asidVisible = inject<Ref<boolean>>("asidVisible");
     const toggleMenu = () => {
       asidVisible.value = !asidVisible.value;
+
     };
     return{ toggleMenu }
   },

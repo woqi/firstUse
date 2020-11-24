@@ -2,7 +2,7 @@
   <div class="layout">
     <Topnav />
     <div class="content">
-      <aside v-show="asidVisible">
+      <aside v-if="asidVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -32,7 +32,6 @@ export default {
   components: { Topnav },
   setup() {
     const asidVisible = inject<Ref<boolean>>("asidVisible");
-    // console.log(asidVisible.value);
     return{
       asidVisible
     }
