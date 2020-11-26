@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Switch value="bool" @handle="bool=$event" />
+    <Switch :s="bool" @handle="bool=$event" />
+    <!-- <Switch :s="bool" @update:s="bool=$event" /> 可以用v-model简化 -->
+    <!--<Switch v-model:s="bool" />-->
     <!-- v-model:value="bool" -->
     Switch~
   </div>

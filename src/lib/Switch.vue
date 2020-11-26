@@ -6,12 +6,17 @@
 <script lang="ts">
 import { ref } from 'vue';
 export default {
-  setup(prop,con) {
-    const s = ref(false)
+  props:{
+    s: Boolean
+  },
+  setup(props,context) {
+    // const s = ref(false)
     const toggle = () => {
-      s.value = !s.value;
+      // context.emit('update:s',!props.s)
+      context.emit('handle',!props.s)
+      // props.s = !props.s;
     };
-    return { s, toggle };
+    return {toggle };
   },
 };
 </script>
